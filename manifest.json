@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Hi Chrome",
+  "description": "Chrome Extensions tutorial",
+  "author": "Austin Lords",
+  "version": "1.0.1",
+  "permissions": ["webRequest"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/extension_logo.png",
+    "32": "icons/extension_logo.png",
+    "48": "icons/extension_logo.png",
+    "128": "icons/extension_logo.png"
+  }, 
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": { 
+    "16": "icons/extension_logo.png",
+    "32": "icons/extension_logo.png",
+    "48": "icons/extension_logo.png",
+    "128": "icons/extension_logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content-script.js"], 
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ], 
+  "commands": {}
+}
